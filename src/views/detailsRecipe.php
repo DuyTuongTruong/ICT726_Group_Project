@@ -1,11 +1,11 @@
 <?php
-$title = "Detasil Recipe";
+$title = "Detail Recipe";
 require_once APPROOT . '/src/views/include/header.php';
 ?>
 <main>
     <article>
         <section class="section hero has-bg-image" aria-label="about-us"
-            style="background-image: url('<?= URLROOT ?>/img/cookbanner.png')">
+            style="background-image: url('<?= URLROOT ?>/<?= $data["details"]->image  ?>')">
             <div class="center-container">
                 <h1 class="h1 hero-title "> <?= $title  ?> </h1>
             </div>
@@ -44,7 +44,10 @@ require_once APPROOT . '/src/views/include/header.php';
                         <div>
                             <div class="content">
                                 <div class="avatar">
-                                    <img src="<?= URLROOT ?>/img/user-default.png" alt="<?= $comment->username ?>">
+                                <figure >
+                                    <img src="<?= URLROOT ?>/img/user-default.png" loading="lazy" alt="<?= $comment->username ?>">
+                                </figure>
+                                   
                                 </div>
                                 <div class="content-comment">
                                     <div class="user">
